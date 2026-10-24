@@ -1,0 +1,118 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background-image: url("MayurImg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header {
+    min-height: 95px;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: transparent;
+}
+
+.logo {
+    text-decoration: none;
+    color: #0e1519;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo small {
+    font-size: 14px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.menu > a,
+.drop-btn {
+    color: #0e1519;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.drop-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.drop-btn span {
+    margin-left: 4px;
+}
+
+.drop-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -15px;
+    padding-top: 15px;
+    min-width: 205px;
+    background: white;
+    box-shadow: 0 8px 25px #00000018;
+    z-index: 10;
+}
+
+.dropdown:hover .drop-menu,
+.dropdown:focus-within .drop-menu {
+    display: block;
+}
+
+.drop-menu a {
+    display: block;
+    padding: 12px 16px;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.drop-menu a:hover {
+    background: #dde0e0;
+}
+
+.btn {
+    text-decoration: none;
+    color: #0e1519;
+}
+
+.hero {
+    min-height: 550px;
+}
+
+@media (max-width: 900px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
